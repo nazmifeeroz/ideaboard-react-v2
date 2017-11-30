@@ -15,8 +15,8 @@ npm start
 
 Let's add a new component called IdeasContainer.js in `src/components`
 ```shell
-➜  ideaboard-react mkdir src/components
-➜  ideaboard-react cd src/components
-➜  components echo 'IdeasContainer' >> IdeasContainer.js
-➜  components sublime IdeasContainer.js
+mkdir src/components
+cd src/components
+echo 'IdeasContainer' >> IdeasContainer.js
+sublime IdeasContainer.js
 ```

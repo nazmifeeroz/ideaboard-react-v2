@@ -36,10 +36,10 @@ class IdeasContainer extends Component {
 }
 
 export default IdeasContainer
-```javascript
+```
 
 Then edit `src/App.js`
-```
+```javascript
 import React, { Component } from 'react';
 import './App.css';
 import IdeasContainer from './components/IdeasContainer'

@@ -1,6 +1,6 @@
 # Ideaboard-React - V2 
 
-####Important: Run `brew update && brew upgrade` before continuing
+#### Important: Run `brew update && brew upgrade` before continuing
 
 Start from the root folder outside the Rails directory:
 ```shell

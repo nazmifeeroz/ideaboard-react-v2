@@ -91,3 +91,42 @@ Now lets change the styles in App.css .. Remove all the styles and add the follo
 }
 ```
 
+In `App.js`, lets initialize the state with a construstor with ideas as an empty array:
+```javascript
+constructor(props) {
+  super(props)
+  this.state = {
+    ideas: []
+  }
+}
+```
+
+Then lets update the state using `componentDidMount()` 
+
+We will need to install the `axios` library to make API calls to the Rails server.
+
+First we install axios with npm:
+#### Important: Run `brew update && brew upgrade` before continuing
+```shell
+npm install axios --save
+```
+
+Once installed, lets import it into `IdeasContainer.js`
+```javascript
+import axio from 'axios'
+```
+
+Now we will use axios in `componentDidMount()`:
+```javascript
+componentDidMount() {
+  axios.get('http://localhost:3001/api/v1/ideas.json')
+
+    .then(response => {
+      console.log(response)
+      this.setState({ideas: response.data})
+    })
+    .catch(error => console.log(error))
+}
+```
+
+

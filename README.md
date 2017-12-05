@@ -59,3 +59,35 @@ class App extends Component {
 
 export default App;
 ```
+
+Create a new component called `IdeasContainer.js` file in src `src/components` 
+
+```javascript
+import React, {Component} from 'react'
+
+class IdeasContainer extends Component {
+  render() {
+    return (
+      <div>
+        Ideas
+      </div>
+    )
+  }
+}
+
+export default IdeasContainer
+```
+
+Now lets change the styles in App.css .. Remove all the styles and add the following:
+```css
+.App-header {
+  text-align: center;
+  height: 150px;
+  padding: 20px;
+}
+
+.App-Intro {
+  font-size: large;
+}
+```
+

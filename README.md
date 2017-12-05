@@ -91,7 +91,7 @@ Now lets change the styles in App.css .. Remove all the styles and add the follo
 }
 ```
 
-In `App.js`, lets initialize the state with a construstor with ideas as an empty array:
+In `IdeasContainer.js`, lets initialize the state with a construstor with ideas as an empty array:
 ```javascript
 constructor(props) {
   super(props)
@@ -128,5 +128,27 @@ componentDidMount() {
     .catch(error => console.log(error))
 }
 ```
+
+We restrict our server to our react app only at `http://localhost:3000` to allow access to standard REST API endpoint methods for all resources.
+
+Now we are able to fetch ideas from our API to use them in our React component.
+
+We can change the render function to iterate through the list ideas from the state and display each of them:
+```javascript
+render() {
+  return (
+    <div>
+      {this.state.ideas.map((idea) => {
+        return(
+          <div className="tile" key={idea.id}>
+            <h4>{idea.title}</h4>
+            <p>{idea.body}</p>
+          </div>
+          )
+      })}
+    </div>
+  )
+}
+  ```
 
 

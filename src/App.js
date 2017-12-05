@@ -4,13 +4,6 @@ import IdeasContainer from './components/IdeasContainer'
 
 class App extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      ideas: []
-    }
-  }
-
   render() {
     return (
       <div className="App">
